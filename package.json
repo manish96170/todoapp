@@ -1,0 +1,20 @@
+{
+  "name": "netdo",
+  "version": "1.0.0",
+  "description": "This is a todo app for just fun",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "angular": "1.6.5",
+    "angular-route": "1.5.8",
+    "angular-animate": "1.6.5"
+  },
+  "author": "Manish",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

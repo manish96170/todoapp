@@ -1,0 +1,49 @@
+{
+	"version": "0.4.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Launch Program",
+			"program": "${workspaceRoot}/node_modules/lite-server/bin/lite-server"
+		},
+	
+		{
+            "name": "launch chrome-debug",
+            "type": "node",
+            "request": "launch",
+            "protocol": "inspector",
+
+            // These paths are only valid for my particular setup! You need to replace them with your own.
+            "cwd": "${workspaceRoot}/../vscode-chrome-debug",
+            "program": "${workspaceRoot}/../vscode-chrome-debug/out/bundle.js",
+            "args": [ "--server=4712" ],
+            "outFiles": ["${workspaceRoot}/out/**/*.js"],
+            "internalConsoleOptions": "openOnSessionStart",
+            "smartStep": true
+        },
+		{
+			"name": "Launch",
+			"type": "node",
+			"request": "launch",
+			 "protocol": "inspector",
+			"program": "${workspaceRoot}/node_modules/lite-server/bin/lite-server",
+			
+			"stopOnEntry": false,
+			"args": [],
+			"cwd": "${workspaceRoot}",
+			"preLaunchTask": null,
+			"runtimeExecutable": null,
+			"runtimeArgs": [
+				"--nolazy"
+			],
+			"env": {
+				"NODE_ENV": "development"
+			},			
+			"console": "integratedTerminal",
+			"sourceMaps": true,
+			"outFiles": [ "${workspaceRoot}/out/**/*.js" ]
+		}
+	
+	]
+}
